@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <table class="slds-table">
+            <thead>
+
+                <template for:each={columns} for:item="col">
+                    <th key={col.Id}>{col.label}</th>
+                </template>
+                
+            </thead>
+            <tbody>
+                <template for:each={rows} for:item="row">
+                    <tr key={row.Id}>
+                        <template for:each={row.fields} for:item="field">
+                            {field}
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
