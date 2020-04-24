@@ -1,6 +1,14 @@
 public without sharing class ProfileCard {
     
     @AuraEnabled(cacheable=true)
+    public static string getFoo(String userId) {
+
+
+
+        return 'foo';
+    }
+    
+    @AuraEnabled(cacheable=true)
     public static Contact getContactByUserId(String userId) {
 
         String contactId = ProfileCard.getContactIdByUserId(userId);
